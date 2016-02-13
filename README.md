@@ -1,7 +1,7 @@
 
 # COS598F: Spark and Cluster Intro
 
-Powerpoint for this lecture:
+Powerpoint for this lecture: https://www.dropbox.com/s/4vh1sb5z0gi63k4/cos598f-spark-c8.pptx
 
 ## Spark
 
@@ -44,6 +44,6 @@ You are required to implement HITS, another link analysis  algorithm (https://en
 Steps:
 
 1. Compile `JavaPageRank.java` into a Spark standalone application following [these instructions](http://spark.apache.org/docs/latest/submitting-applications.html). You might need to install `maven` locally for compilation.
-2. Modify the program if necessary, and run it on the Google link data: http://spark.apache.org/docs/latest/submitting-applications.html
+2. Modify the program if necessary, and run it on the Google link data: https://snap.stanford.edu/data/web-Google.html
 3. Implement HITS algorithm based on PageRank (you can put two algorithms in two class files under the same maven project, and compile them into the same jar). Run it on the Google data, and compare the results against PageRank.
 4. Copy the jar file to your home folder via `scp`, and run them on the larger LiveJournal data in `/memex/linpengt/cos598f/soc-LiveJournal1.txt`. Vary the number of cores used by your application from 4 to 24, and record the running time.
