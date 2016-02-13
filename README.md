@@ -21,7 +21,12 @@ After obtaining username and password information, first log in to `mmx`:
 ssh yourusername@mmx.cs.princeton.edu
 ```
 
-then ssh into one of the worker machines (f1, f3, f4, f5, f6, f8), e.g. `ssh f1`. The home directory is under `/memex/yourusername`, however we don't have much storage space left, so don't put too many things there before gaining the permission.
+then ssh into one of the worker machines (f1, f3, f4, f5, f6, f8), e.g. `ssh f1`. The home directory is under `/memex/yourusername`, however we don't have much storage space left, so don't put too many things there before gaining the permission. Put the following two lines in your `~/.bashrc`:
+
+```
+export PATH="/opt/mono/bin:$PATH"
+export JAVA_HOME=/etc/alternatives/jre_1.7.0
+```
 
 The course files are under `/memex/linpengt/cos598f`. There is a spark distribution under `/memex/linpengt/cos598f/spark-1.6.0-bin-hadoop2.6`. From there execute:
 
@@ -35,7 +40,7 @@ Lines with a: 58, lines with b: 26
 ```
 Congratulations! You have run your first Spark application. Read this page to find all the information about submitting jobs to a spark cluster: http://spark.apache.org/docs/latest/submitting-applications.html
 
-## First assignment
+## Assignment
 
 There is a PageRank example application for Spark here: https://github.com/apache/spark/blob/master/examples/src/main/java/org/apache/spark/examples/JavaPageRank.java
 
