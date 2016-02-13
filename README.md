@@ -1,5 +1,5 @@
 
-# COS598F: Spark and Cluster Intro
+# COS598F: Spark and c8 Cluster Intro
 
 Powerpoint for this lecture: https://www.dropbox.com/s/4vh1sb5z0gi63k4/cos598f-spark-c8.pptx
 
