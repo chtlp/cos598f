@@ -28,7 +28,7 @@ export JAVA_HOME=/etc/alternatives/jre_1.7.0
 export SPARK_HOME=/memex/linpengt/cos598f/spark-1.6.0-bin-hadoop2.6
 ```
 
-The course files are under `/memex/linpengt/cos598f`. There is a spark distribution under `/memex/linpengt/cos598f/spark-1.6.0-bin-hadoop2.6`. From there execute:
+The course files are under `/memex/linpengt/cos598f`. There is a spark distribution under `/memex/linpengt/cos598f/spark-1.6.0-bin-hadoop2.6`. `cd` into that directory, and execute:
 
 ```bash
 bin/spark-submit  --class "SimpleApp"   --master spark://fat:7077  ../java_wordcount/target/simple-project-1.0.jar
