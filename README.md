@@ -21,7 +21,7 @@ After obtaining username and password information, first log in to `mmx`:
 ssh yourusername@mmx.cs.princeton.edu
 ```
 
-then ssh into one of the worker machines (f1, f3, f4, f5, f6, f8), e.g. `ssh f1`. The home directory is under `/memex/yourusername`, however we don't have much storage space left, so don't put too many things there before gaining the permission. Put the following two lines in your `~/.bashrc`:
+then ssh into one of the worker machines (f1, f3, f4, f5, f6, f8), e.g. `ssh f1`. The home directory is under `/memex/yourusername`, and shared across all the nodes. However we don't have much space left, so please don't overuse it. Put the following two lines in your `~/.bashrc`:
 
 ```
 export JAVA_HOME=/etc/alternatives/jre_1.7.0
