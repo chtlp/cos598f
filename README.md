@@ -24,8 +24,8 @@ ssh yourusername@mmx.cs.princeton.edu
 then ssh into one of the worker machines (f1, f3, f4, f5, f6, f8), e.g. `ssh f1`. The home directory is under `/memex/yourusername`, however we don't have much storage space left, so don't put too many things there before gaining the permission. Put the following two lines in your `~/.bashrc`:
 
 ```
-export PATH="/opt/mono/bin:$PATH"
 export JAVA_HOME=/etc/alternatives/jre_1.7.0
+export SPARK_HOME=/memex/linpengt/cos598f/spark-1.6.0-bin-hadoop2.6
 ```
 
 The course files are under `/memex/linpengt/cos598f`. There is a spark distribution under `/memex/linpengt/cos598f/spark-1.6.0-bin-hadoop2.6`. From there execute:
