@@ -16,12 +16,13 @@ We have setup a Spark standalone cluster on our c8 cluster. Access its WebUI wit
 To submit jobs to the spark cluster, first you need to apply for an account for c8:
 https://docs.google.com/forms/d/1RTYewndE6WfTQOrAwrN6wCYkWARjEynic8PDrNI6l8Y/viewform?usp=send_form
 
-After obtaining username and password information, first log in to `mmx`: 
+After obtaining username and password information, first log in to the bastion host: 
 ```
 ssh yourusername@mmx.cs.princeton.edu
 ```
 
-then ssh into one of the worker machines (f1, f3, f4, f5, f6, f8), e.g. `ssh f1`. The home directory is under `/memex/yourusername`, and shared across all the nodes. However we don't have much space left, so please don't overuse it. Put the following two lines in your `~/.bashrc`:
+then ssh into one of the computing nodes. The nodes are from e0-e31, and f0-f31. Unfortunately many of them are down currently.
+We use f1, f3, f4, f5, f6, f8 for our Spark cluster, so you can ssh into one of those machines to submit a job, e.g. `ssh f1`. The home directory is under `/memex/yourusername`, and shared across all the nodes. However we don't have much space left, so please don't overuse it. Put the following two lines in your `~/.bashrc` in order to run Spark:
 
 ```
 export JAVA_HOME=/etc/alternatives/jre_1.7.0
