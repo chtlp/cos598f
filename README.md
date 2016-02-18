@@ -11,7 +11,7 @@ Following the webpage, you can download Spark and run it on your local machine. 
 
 ## c8 cluster
 
-We have setup a Spark standalone cluster on our c8 cluster. Access its WebUI with http://mmx.cs.princeton.edu:8111/, there are 6 workers currently.
+We have setup a Spark standalone cluster on our c8 cluster. Access its WebUI with http://mmx.cs.princeton.edu:8112/, there are 7 nodes currently.
 
 To submit jobs to the spark cluster, first you need to apply for an account for c8:
 https://docs.google.com/forms/d/1RTYewndE6WfTQOrAwrN6wCYkWARjEynic8PDrNI6l8Y/viewform?usp=send_form
