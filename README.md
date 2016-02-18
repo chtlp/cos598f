@@ -11,7 +11,7 @@ Following the webpage, you can download Spark and run it on your local machine. 
 
 ## c8 cluster
 
-We have setup a Spark standalone cluster on our c8 cluster. Access its WebUI with http://mmx.cs.princeton.edu:8112/, there are 7 nodes currently.
+We have setup a Spark standalone cluster on our c8 cluster. Access its WebUI with http://mmx.cs.princeton.edu:8112/, there are 10 nodes currently.
 
 To submit jobs to the spark cluster, first you need to apply for an account for c8:
 https://docs.google.com/forms/d/1RTYewndE6WfTQOrAwrN6wCYkWARjEynic8PDrNI6l8Y/viewform?usp=send_form
@@ -22,7 +22,7 @@ ssh yourusername@mmx.cs.princeton.edu
 ```
 
 then ssh into one of the computing nodes. The nodes are from e0-e31, and f0-f31. Unfortunately many of them are down currently.
-We use f0, f1, f3, f4, f5, f6, f8 for our Spark cluster, and f8 is the head node. Due to some legacy issues (we're working on it) `ssh f8` and submit jobs there. The home directory is under `/memex/yourusername`, and shared across all the nodes. However we don't have much space left, so please don't overuse it. Put the following two lines in your `~/.bashrc` in order to run Spark:
+We use f0, f1, f3-f5, f6, f8, f12-14 for our Spark cluster, and f8 is the head node. Due to some legacy issues (we're working on it) `ssh f8` and submit jobs there. The home directory is under `/memex/yourusername`, and shared across all the nodes. However we don't have much space left, so please don't overuse it. Put the following two lines in your `~/.bashrc` in order to run Spark:
 
 ```
 export JAVA_HOME=/etc/alternatives/jre_1.7.0
