@@ -22,7 +22,7 @@ ssh yourusername@mmx.cs.princeton.edu
 ```
 
 then ssh into one of the computing nodes. The nodes are from e0-e31, and f0-f31. Unfortunately many of them are down currently.
-We use f1, f3, f4, f5, f6, f8 for our Spark cluster, so you can ssh into one of those machines to submit a job, e.g. `ssh f1`. The home directory is under `/memex/yourusername`, and shared across all the nodes. However we don't have much space left, so please don't overuse it. Put the following two lines in your `~/.bashrc` in order to run Spark:
+We use f0, f1, f3, f4, f5, f6, f8 for our Spark cluster, and f8 is the head node. Due to some legacy issues (we're working on it) `ssh f8` and submit jobs there. The home directory is under `/memex/yourusername`, and shared across all the nodes. However we don't have much space left, so please don't overuse it. Put the following two lines in your `~/.bashrc` in order to run Spark:
 
 ```
 export JAVA_HOME=/etc/alternatives/jre_1.7.0
@@ -32,12 +32,16 @@ export SPARK_HOME=/memex/linpengt/cos598f/spark-1.6.0-bin-hadoop2.6
 The course files are under `/memex/linpengt/cos598f`. There is a spark distribution under `/memex/linpengt/cos598f/spark-1.6.0-bin-hadoop2.6`. `cd` into that directory, and execute:
 
 ```bash
-bin/spark-submit  --class "SimpleApp"   --master spark://fat:7077  ../java_wordcount/target/simple-project-1.0.jar
+bin/spark-submit  --class "JavaWordCount"   --master spark://f8:7077  ../java_wordcount/target/wordcount-project-1.0.jar ~/cos598f/spark/README.md
 ```
 
 And look for output line like
 ```
-Lines with a: 58, lines with b: 26
+package: 1
+For: 2
+Programs: 1
+processing.: 1
+...
 ```
 Congratulations! You have run your first Spark application. Read this page to find all the information about submitting jobs to a spark cluster: http://spark.apache.org/docs/latest/submitting-applications.html
 
@@ -52,4 +56,4 @@ Steps:
 1. Compile `JavaPageRank.java` into a Spark standalone application following [these instructions](http://spark.apache.org/docs/latest/submitting-applications.html). You might need to install `maven` locally for compilation.
 2. Modify the program if necessary, and run it on the Google link data: https://snap.stanford.edu/data/web-Google.html
 3. Implement HITS algorithm based on PageRank (you can put two algorithms in two class files under the same maven project, and compile them into the same jar). Run it on the Google data, and compare the results against PageRank.
-4. Copy the jar file to your home folder via `scp`, and run them on the larger LiveJournal data in `/memex/linpengt/cos598f/soc-LiveJournal1.txt`. Vary the number of cores used by your application from 4 to 24, and record the running time.
+4. Copy the compiled jar file to your home folder via `scp` to `mmx.cs.princeton.edu`, and run them on the larger LiveJournal data in `/memex/linpengt/cos598f/soc-LiveJournal1.txt`. Vary the number of cores used by your application from 4 to 24, and record the running time.
